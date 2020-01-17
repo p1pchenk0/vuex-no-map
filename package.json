@@ -1,0 +1,36 @@
+{
+  "name": "vuex-no-map",
+  "version": "1.0.0",
+  "description": "Vuex plugin, which allows to use store functionality without need to use vuex mappers in components",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "babel src/index.js --out-dir dist",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p1pchenk0/vuex-no-map.git"
+  },
+  "keywords": [
+    "vuex",
+    "mapstate",
+    "mapgetters",
+    "mapactions",
+    "mapmutations",
+    "map"
+  ],
+  "author": "Artur Pipchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p1pchenk0/vuex-no-map/issues"
+  },
+  "homepage": "https://github.com/p1pchenk0/vuex-no-map#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3"
+  }
+}
