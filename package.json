@@ -1,8 +1,8 @@
 {
   "name": "vuex-no-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vuex plugin, which allows to use store functionality without need to use vuex mappers in components",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "compile": "babel src/index.js --out-dir dist",
     "prepublish": "npm run compile"
