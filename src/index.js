@@ -1,5 +1,5 @@
 export default {
-    install(Vue, Vuex, store) {
+    install(Vue, { Vuex, store }) {
         const mappedState = {};
         const mappedGetters = {};
 
