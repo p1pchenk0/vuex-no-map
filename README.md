@@ -1,4 +1,6 @@
-#vuex-no-map
+# vuex-no-map
+[![npm](https://img.shields.io/npm/v/vuex-no-map.svg)](vue-handy-subscriptions) ![npm](https://img.shields.io/npm/dt/vuex-no-map.svg)
+
 This plugin allows to omit using `mapState`, `mapGetters`, `mapMutations`, `mapActions`
 And thus reduce amount of code.
 
