@@ -4,24 +4,18 @@ export default {
         const mappedGetters = {};
 
         for (const moduleName of Object.keys(store.state)) {
-            const mapped = Vuex.mapState(moduleName, Object.keys(store.state[moduleName]));
-
-            for (const stateItemName of Object.keys(mapped)) {
+            for (const stateItemName of Vuex.mapState(moduleName, Object.keys(store.state[moduleName]))) {
                 mappedState[`${moduleName}_${stateItemName}`] = mapped[stateItemName];
             }
         }
 
         for (const getterName of Object.keys(store._wrappedGetters)) {
-            const safeName = getterName.replace('/', '_');
-
-            mappedGetters[safeName] = store._wrappedGetters[getterName];
+            mappedGetters[getterName.replace('/', '_')] = store._wrappedGetters[getterName];
         }
 
         ['_mutations', '_actions'].forEach((e) => {
             for (const storeMethodName of Object.keys(store[e])) {
-                const safeName = storeMethodName.replace('/', '_');
-
-                Vue.prototype[safeName] = store[e][storeMethodName];
+                Vue.prototype[storeMethodName.replace('/', '_')] = store[e][storeMethodName];
             }
         });
 

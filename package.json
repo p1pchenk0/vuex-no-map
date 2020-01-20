@@ -1,18 +1,22 @@
 {
   "name": "vuex-no-map",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Vuex plugin, which allows to use store functionality without need to use vuex mappers in components",
   "main": "dist/index.js",
   "scripts": {
     "compile": "babel src/index.js --out-dir dist",
-    "prepublish": "npm run compile"
+    "uglify": "uglifyjs dist/index.js -c -o dist/index.js",
+    "prepublish": "npm run compile && npm run uglify"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/p1pchenk0/vuex-no-map.git"
   },
   "keywords": [
+    "vue",
     "vuex",
+    "state",
+    "state management",
     "mapstate",
     "mapgetters",
     "mapactions",
@@ -28,7 +32,8 @@
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3"
+    "@babel/preset-env": "^7.8.3",
+    "uglify-js": "^3.7.5"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3"
