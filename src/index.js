@@ -4,7 +4,9 @@ export default {
         const mappedGetters = {};
 
         for (const moduleName of Object.keys(store.state)) {
-            for (const stateItemName of Vuex.mapState(moduleName, Object.keys(store.state[moduleName]))) {
+            const mapped = Vuex.mapState(moduleName, Object.keys(store.state[moduleName]));
+
+            for (const stateItemName of Object.keys(mapped)) {
                 mappedState[`${moduleName}_${stateItemName}`] = mapped[stateItemName];
             }
         }
